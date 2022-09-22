@@ -38,11 +38,11 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   // create a new category
-  try {
-    const newCategory = Category.create({
-      category_name: req.category_name,
-    });
-  }
+  // try {
+  //   const newCategory = Category.create({
+  //     category_name: req.category_name,
+  //   });
+  // }
 });
 
 router.put('/:id', (req, res) => {
