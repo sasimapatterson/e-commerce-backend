@@ -34,7 +34,7 @@ Product.init(
       defaultValue: 10,
       validate: {
         isNumeric: true,
-      }
+      },
     },
     category_id: {
       type: DataTypes.INTEGER,
@@ -50,7 +50,7 @@ Product.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'product',
-  }
+  },
 );
 
 module.exports = Product;
