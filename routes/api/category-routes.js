@@ -11,7 +11,8 @@ router.get('/', async (req, res) => {
       
       include: [{model: Product}],
     });
-    return res.status(200).json(allCategoryData);
+   
+    res.status(200).json(allCategoryData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -20,12 +21,15 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
-  try {
-    const findCategory = await Category.findOne();
-    return res.status(200).json(findCategory);
-  } catch (err) {
-    res.status(500).json(err);
-  }
+//   try {
+//     const findCategory = await Category.findOne();
+//     return res.status(200).json(findCategory);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+  Category.findAll()
+.then(dbCategoryData => res.json(dbCategoryData))
 });
 
 router.post('/', (req, res) => {
